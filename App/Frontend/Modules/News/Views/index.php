@@ -1,0 +1,13 @@
+<?php
+foreach ($listeNews as $news)
+{
+?>
+<div class="post-preview">
+  <h2 class="post-title"><a href="news-<?= $news['id'] ?>.html"><?= $news['titre'] ?></a></h2>
+  <p class="post-meta">Par <em><?= $news['auteur'] ?></em>, le <?= $news['dateAjout']->format('d/m/Y à H\hi')?></p>
+  <p><?= nl2br($news['contenu']) ?></p>
+</div>
+<br>
+<hr>
+<?php
+}
